@@ -7,3 +7,5 @@ To Intall Depandancies- `dep ensure`
 To Run- `go run main.go`
 
 The schema and an interface to interact can be found in the playground at `localhost:8080/query/playground`
+
+Please note the dataset `gendata` is simply meant to demonstrate the QFields, I know it's ineffiecient and you wouldn't want to query a dataset like that.
