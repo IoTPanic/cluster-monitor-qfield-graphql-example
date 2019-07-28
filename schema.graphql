@@ -1,0 +1,36 @@
+
+type Device {
+    id: String!
+    name: String!
+    status: Status!
+    group: DeviceGroup!
+    os: String!
+}
+
+type Status{
+    state: String!
+    cpu: Int
+    memoryMb: Int
+}
+
+type DeviceGroup{
+    id: String!
+    name: String!
+    devices: [Device]!
+    installation: Installation!
+}
+
+type Installation {
+    id: String!
+    name: String!
+    location: String!
+    groups: [DeviceGroup]!
+    devices: [Device]!
+}
+
+type Query{
+    devices: [Device]!
+    groups: [DeviceGroup]!
+    installations: [Installation]!
+    device(id: String!): Device
+}
